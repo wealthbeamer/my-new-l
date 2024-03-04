@@ -1,0 +1,224 @@
+body{
+    margin: 1.5em;
+    font-family: 'Poppins', sans-serif;
+}
+a{
+    text-decoration:none;
+    font-size:1.3rem;
+}
+.H-img{
+    position: absolute;
+    top:0px;
+    left:0px;
+    background-image:url(../image/shoe1.jpg);
+    width:100%;
+    height:100vh;
+    background-size: cover;
+    z-index:-1;
+    background-position-x:20%;
+    background-position-y:20%;
+    animation:intro-load 2s forwards;
+    
+}
+.logo{
+    color:white;
+    font-weight: bold;
+}
+header{
+    display:flex;
+    justify-content: space-between;
+    svg{
+        cursor: pointer;
+    }
+}
+.navigation{
+    list-style-type: none;
+    padding:0px;
+    margin-top:8em;
+    a{
+    color: black;
+    padding: .75em 2em;
+    display: block;
+    width:100%;
+    }
+    a:hover{
+        cursor: pointer;
+    }
+}
+nav{
+    position:fixed;
+    right:0px;
+    top:0px;
+    height:100vh;
+    background-color:white;
+    width:50%;
+    text-transform: uppercase;
+    z-index:999;
+    transform: translateX(100%);
+    transition:transform .5s ease-in-out;
+}
+section.hero{
+    color:white;
+    height:90vh;
+    animation:moving-D 1s ease-in-out forwards;
+    opacity: 0  ;
+}
+ .down-arrow {
+     stroke: white;
+     position: absolute;
+     width:1em;
+     bottom:5em;
+     animation: move-arrow 1s alternate-reverse infinite;
+
+     path{
+         fill: white;
+     }
+ }
+ h1{
+    font-size: 3rem;
+    margin-top:2em;
+    line-height:3.3rem;
+ }
+ .sub-heading{
+    font-size:1.4rem;
+ }
+ .close{
+    float: right;
+    margin:2em;
+    width:2.5em;
+ }
+ .main-info{
+    img{
+        width:100%;
+        object-fit: cover;
+        height:11em;
+    }
+    .tittle{
+        font-weight: bold;
+        font-size:1.25rem;
+    }
+    .p-tittle{
+        line-height:1.5rem;
+    }
+    .D-tittle {
+        font-weight: bold;
+        font-size: 1.25rem;
+          }
+    
+    .p-tittle{
+       line-height: 1.5rem;
+          }
+ }
+ @media only screen and (min-width: 680px){
+    body {
+            margin: 1.5em 5em;
+            font-family: 'Poppins', sans-serif;
+        }
+ }
+  @media only screen and (min-width:920px){
+.menu{
+    display:none;
+}
+nav{
+    transform: translateX(0);
+    display: block;
+    width: auto;
+    height:auto;
+    background:none;
+    position:unset;
+}
+.close{
+    display:none;
+}
+.navigation{
+    display: flex;
+    margin:0px;
+    a{
+    color:white;
+    padding: .5em 1.5em;
+    font-size:.9rem;
+
+    }
+        a:hover {
+            background-color: none;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+}
+.H-img{
+    left:unset;
+    width:50%;
+    height:42em;
+    right:0px;
+}
+.logo{
+    color: black;
+    span{
+        color:red;
+    }
+}
+section.hero{
+    color: black;
+    height:auto;
+    width:40%;
+    margin-bottom:8em;
+    
+}
+.down-arrow{
+    stroke: black;
+    position:unset;
+    pat{
+        fill:black;
+    }
+}
+  }
+  .features{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:3em;
+    margin-bottom:8em;
+img{
+    width:25em;
+}
+  }
+  .content{
+    width:25em;
+  }
+ @media only screen and (min-width:920px){
+    body{
+        width:1200px;
+        margin:0 auto;
+    }
+    .features{
+        gap:0px;
+    }
+ }
+@keyframes intro-load{
+    from{
+clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    to{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    
+}
+@keyframes move-arrow {
+    from {
+        transform: translateY(-30px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+
+}
+@keyframes moving-D  {
+    from {
+            transform: translateY(-100px);
+        }
+    
+        to {
+            transform: translateY(0);
+            opacity:1;
+        }
+}
